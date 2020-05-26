@@ -1,17 +1,18 @@
 package networking
 
 import (
-	"net/http"
 	"bytes"
+	"net/http"
 )
 
 func SendSoap(endpoint, message string) (*http.Response, error) {
 	httpClient := new(http.Client)
 
+	httpClient.Timeout = 3 * 1000 * 1000 * 1000
 	resp, err := httpClient.Post(endpoint, "application/soap+xml; charset=utf-8", bytes.NewBufferString(message))
 	if err != nil {
 		return resp, err
 	}
 
-	return resp,nil
+	return resp, nil
 }
