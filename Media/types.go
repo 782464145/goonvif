@@ -1,8 +1,8 @@
 package Media
 
 import (
-	"github.com/yakovlevdmv/goonvif/xsd/onvif"
-	"github.com/yakovlevdmv/goonvif/xsd"
+	"github.com/782464145/goonvif/xsd/onvif"
+	"github.com/782464145/goonvif/xsd"
 )
 
 type Capabilities struct {
